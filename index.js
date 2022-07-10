@@ -11,6 +11,34 @@ const tutorials = [
   'what is JSONP?'
 ];
 
-const titleCased = () => {
-  return tutorials
+const titleCased = () => { 
+  let something = '';
+  let i=0;
+  let title = [];
+  for (const item of tutorials) {
+    const strToArr = item.split(' ');
+    something = strToArr.map(word => word[0].toUpperCase() + word.substring(1));
+    title[i] = something.join(' ');
+    console.log(title[i]);
+    i++;
+
+  }
+  return title;
+    
 }
+/*
+import java.util.Arrays;
+public class ArrayOfStrings {
+   public static void main(String args[]) {
+      String stringArray[] = {"Hello ", " how", " are", " you", " welcome", " to", " Tutorialspoint"};
+      StringBuffer sb = new StringBuffer();
+      for(int i = 0; i < stringArray.length; i++) {
+         sb.append(stringArray[i]);
+      }
+      String str = Arrays.toString(stringArray);
+      System.out.println(str);
+   }
+}
+
+
+*/ 
